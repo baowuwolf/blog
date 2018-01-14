@@ -1,0 +1,10 @@
+## 背景介绍
+公司接了一些广告SDK,这些SDK的开发程度参差不齐，造成了一些问题。我们做的是一款视频播放类型的App，所以在播放页面需要广告的例如StoreKit页面的弹出和消失事件，标准的StoreKit弹出方法是不会调用当前VC的viewWillAppear:等相关方法的（有兴趣知道原因的同学，欢迎沟通交流），因此诞生了这个程序
+
+## 解决了什么问题
+解决了类似SKStoreProductViewController 被present时不会触发presentedVC的viewWillAppear:以及相关函数
+
+## Useage
+- 添加分类文件到项目中
+- 注册CYPresentationControllerDidPresentNotification、CYPresentationControllerDidDismissNotification通知
+

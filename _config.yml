@@ -1,13 +1,1 @@
-title: Your awesome title
- email: 86cube@gmail.com description: >- # this means to ignore newlines until "baseurl:"
-  
- baseurl: "/blog" # the subpath of your site, e.g. /blog
- url: "http://github.baowuwolf.io" # the base hostname & protocol for your site, e.g. http://example.com
- twitter_username: baowuwolf
- github_username:  baowuwolf
- 
- # Build settings
- markdown: kramdown
  theme: jekyll-theme-tactile
- plugins:
-   - jekyll-feed

@@ -1,0 +1,7 @@
+{% capture openfolder_array %}{% include /functions/f_navtree_open.html theTOC=toc %}{% endcapture %}
+{% assign openfolder_array = openfolder_array | strip_newlines | split: "," %}
+{% include /functions/f_navtree.html theTOC=toc outer='true' opentree =openfolder_array %}
+
+<!--
+First the function block is run within a capture block with the full TOC. The capture block assigns the returned comma separated list of folders (simply a string) to the openfolder_array variable. The variable is then stripped of newlines and split into an array object, and then assigned to the same variable name. Finally, the array is passed to the /functions/f_navtree.html where is is used to build the TOC.
+-->
